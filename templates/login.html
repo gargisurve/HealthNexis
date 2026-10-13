@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="login-body">
+
+<div class="login-wrapper">
+
+    <div class="login-card-modern">
+        <h2>Admin Console</h2>
+        <p class="login-subtitle">Secure access</p>
+
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+
+        <button onclick="login()">Login</button>
+
+        <p id="errorMsg" class="error"></p>
+    </div>
+
+</div>
+
+<script>
+function login() {
+    const user = document.getElementById("username").value;
+    const pass = document.getElementById("password").value;
+
+    if (user === "admin" && pass === "admin123") {
+        sessionStorage.setItem("isAdmin", "true");
+        window.location.href = "/admin";
+    } else {
+        document.getElementById("errorMsg").innerText = "Invalid credentials";
+    }
+}
+</script>
+
+</body>
+</html>

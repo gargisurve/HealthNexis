@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{{ url_for('static', filename='admin.js') }}"></script>
+
+</head>
+<body>
+<div class="navbar">
+    <a href="/">Home</a>
+    <a href="/index">Assessment</a>
+    <a href="/login">Admin</a>
+</div>
+<h1 class="main-title">HealthNexis - Admin Analytics Dashboard</h1>
+
+<div class="admin-container">
+
+    <div class="metrics">
+        <div class="metric-card">
+            <h3>Total Assessments</h3>
+            <p id="totalUsers"></p>
+        </div>
+
+        <div class="metric-card">
+            <h3>Average Risk</h3>
+            <p id="avgRisk"></p>
+        </div>
+        <div class="metric-card">
+    <h3>High Risk %</h3>
+    <p id="highPercent"></p>
+</div>
+    </div>
+
+    <div class="charts">
+        <div class="chart-card">
+            <h3>Risk Distribution</h3>
+            <canvas id="pieChart"></canvas>
+        </div>
+
+        <div class="chart-card">
+            <h3>Risk Category Count</h3>
+            <canvas id="barChart"></canvas>
+        </div>
+    </div>
+
+    <button class="logout-btn" onclick="logout()">Logout</button>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="{{ url_for('static', filename='admin.js') }}"></script>
+</body>
+</html>

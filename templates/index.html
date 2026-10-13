@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>AI Lifestyle Analytics Platform</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="navbar">
+    <a href="/">Home</a>
+    <a href="/index">Assessment</a>
+    <a href="/login">Admin</a>
+</div>
+
+<h1 class="main-title">
+    HealthNexis - AI Lifestyle Risk Analytics Platform
+</h1>
+
+<div class="dashboard">
+
+    <!-- LEFT: FORM -->
+    <div class="form-card">
+
+        <h2>Risk Assessment</h2>
+
+        <form id="predictionForm">
+            <div class="grid">
+
+                <input type="number" id="age" placeholder="Age" required>
+                <input type="number" id="height" placeholder="Height (cm)" required>
+                <input type="number" id="weight" placeholder="Weight (kg)" required>
+                <input type="number" id="sleep" placeholder="Sleep Hours" required>
+                <input type="number" id="stress" placeholder="Stress Level" required>
+                <input type="number" id="bmi" placeholder="BMI" required>
+
+                <select id="gender" required>
+                    <option value="">Gender</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                </select>
+
+                <select id="occupation" required>
+                    <option value="">Occupation</option>
+                    <option>Student</option>
+                    <option>Working Professional</option>
+                    <option>Homemaker</option>
+                </select>
+
+                <select id="diet" required>
+                    <option value="">Diet</option>
+                    <option>Healthy</option>
+                    <option>Average</option>
+                    <option>Unhealthy</option>
+                </select>
+
+                <select id="junkfood" required>
+                    <option value="">Junk Food</option>
+                    <option>Never</option>
+                    <option>Rarely</option>
+                    <option>Few times a week</option>
+                    <option>Daily</option>
+                </select>
+
+                <select id="smoking" required>
+                    <option value="">Smoking</option>
+                    <option>No</option>
+                    <option>Occasionally</option>
+                    <option>Yes</option>
+                </select>
+
+                <select id="alcohol" required>
+                    <option value="">Alcohol</option>
+                    <option>Never</option>
+                    <option>Occasionally</option>
+                    <option>Regularly</option>
+                </select>
+
+                <select id="family" required>
+                    <option value="">Family History</option>
+                    <option>No</option>
+                    <option>Not Sure</option>
+                    <option>Yes</option>
+                </select>
+
+            </div>
+
+            <button type="submit">Run AI Assessment</button>
+        </form>
+
+    </div>
+
+    <!-- RIGHT: RESULT PANEL -->
+    <div class="result-card">
+
+        <div class="risk-header">
+            <h3 id="riskValue"></h3>
+            <span id="riskBadge" class="badge"></span>
+        </div>
+
+        <div id="populationComparison" class="info-block"></div>
+
+        <div class="drivers-section">
+            <h4>Key Risk Drivers</h4>
+            <ul id="driverList"></ul>
+        </div>
+
+        <div class="recommendation-box">
+            <h4>AI Recommendation</h4>
+            <p id="recommendationText"></p>
+        </div>
+
+        <button id="downloadReport" style="display:none;">
+            Download Detailed Report
+        </button>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
