@@ -93,7 +93,7 @@ The HealthNexis project report identifies the following related research work:
 
 This project translates concepts explored in the research work into a practical web application integrating predictive analytics, database management, and cloud infrastructure.
 
-*Add the publication venue, author list, DOI, or official publication URL here once verified.*
+*DOI:  https://doi.org/10.5281/zenodo.18103041*
 
 ## Limitations
 
@@ -110,10 +110,5 @@ This project translates concepts explored in the research work into a practical 
 - Improve accessibility and the user experience.
 - Extend monitoring and analytics capabilities.
 
-## Academic Project
-
-**Project:** HealthNexis — Cloud-Integrated Lifestyle Disease Risk Prediction and Monitoring System Using ML
-
 **Author:** Gargi Ashish Surve
 
-**Project Guide:** Prof. Radhika Fulzele
